@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Insights 工作流介绍 · 深度分析</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:-apple-system,"PingFang SC","Noto Sans SC","Microsoft YaHei",sans-serif;
+  background:#f5f6fa;color:#1e293b;line-height:1.8
+}
+.container{display:flex;max-width:1200px;margin:0 auto;padding:40px 24px;gap:40px}
+
+/* 侧边栏导航 */
+.sidebar{
+  width:240px;flex-shrink:0;position:sticky;top:40px;align-self:start;
+  background:#fff;border-radius:16px;padding:24px;box-shadow:0 2px 12px rgba(0,0,0,.06);max-height:calc(100vh-80px);overflow-y:auto
+}
+.sidebar h3{font-size:13px;color:#94a3b8;text-transform:uppercase;letter-spacing:1px;margin-bottom:16px}
+.sidebar nav{display:flex;flex-direction:column;gap:6px}
+.sidebar a{
+  font-size:13px;color:#64748b;text-decoration:none;padding:6px 10px;border-radius:8px;transition:all .15s
+}
+.sidebar a:hover{background:#f1f5f9;color:#4F46E5}
+
+/* 主内容区 */
+.main{flex:1;min-width:0}
+.banner{
+  background:linear-gradient(135deg,#1e1b4b 0%,#312e81 40%,#4338ca 70%,#4F46E5 100%);
+  border-radius:20px;padding:48px 56px 40px;margin-bottom:32px;position:relative;overflow:hidden
+}
+.banner::before{
+  content:'';position:absolute;top:-60%;right:-15%;width:400px;height:400px;
+  background:rgba(255,255,255,.06);border-radius:50%
+}
+.banner-label{
+  display:inline-block;background:rgba(255,255,255,.15);backdrop-filter:blur(4px);
+  color:#a5b4fc;font-size:12px;font-weight:600;padding:4px 14px;border-radius:20px;margin-bottom:20px
+}
+.banner h1{color:#fff;font-size:34px;font-weight:800;line-height:1.3;margin-bottom:16px;position:relative;z-index:1}
+.banner p{color:#c7d2fe;font-size:15px;line-height:1.7;position:relative;z-index:1}
+.banner-meta{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px;position:relative;z-index:1}
+.banner-meta a{
+  display:inline-block;background:rgba(255,255,255,.1);color:#e0e7ff;font-size:12px;padding:4px 14px;border-radius:16px;text-decoration:none
+}
+.banner-meta a:hover{background:rgba(255,255,255,.2)}
+.banner-date{color:#a5b4fc;font-size:13px;position:relative;z-index:1;margin-top:12px}
+
+/* 文章内容区 */
+.content{background:#fff;border-radius:20px;padding:48px 56px;box-shadow:0 2px 12px rgba(0,0,0,.06)}
+.content p{margin-bottom:16px;font-size:15px;color:#334155}
+.content strong{color:#0f172a;font-weight:700}
+.content h2{font-size:24px;font-weight:700;color:#0f172a;margin:48px 0 20px;padding-top:8px;display:flex;align-items:center;gap:10px}
+.content h2 .num{display:inline-flex;width:32px;height:32px;background:linear-gradient(135deg,#4F46E5,#7C3AED);color:#fff;font-size:14px;font-weight:700;border-radius:8px;align-items:center;justify-content:center;flex-shrink:0}
+.content h3{font-size:18px;font-weight:700;color:#1e293b;margin:32px 0 12px}
+.content ul{padding-left:24px;margin-bottom:16px}
+.content li{margin-bottom:6px;font-size:15px;color:#334155}
+.content blockquote{margin:24px 0 28px;padding:20px 24px 20px 28px;background:linear-gradient(135deg,#eef2ff,#f5f3ff);border-left:4px solid #4F46E5;border-radius:0 14px 14px 0;font-style:italic}
+.content blockquote p{color:#1e293b;font-size:15px;margin:0}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin:24px 0 28px}
+.stat-card{background:linear-gradient(135deg,#f8fafc,#f1f5f9);border-radius:14px;padding:20px;text-align:center}
+.stat-value{font-size:28px;font-weight:800;background:linear-gradient(135deg,#4F46E5,#7C3AED);-webkit-background-clip:text;-webkit-text-fill-color:transparent;line-height:1.2;margin-bottom:4px}
+.stat-label{font-size:13px;color:#64748b}
+.footer{margin-top:24px;padding:20px 56px;text-align:center;font-size:13px;color:#94a3b8}
+@media(max-width:768px){
+  .container{flex-direction:column;padding:20px 16px}
+  .sidebar{width:100%;position:static;max-height:none}
+  .banner{padding:32px 24px}
+  .banner h1{font-size:26px}
+  .content{padding:28px 20px}
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <aside class="sidebar">
+    <h3>📑 目录</h3>
+    <nav>
+      <a href="#overview">工作流概览</a>
+      <a href="#how-it-works">运作方式</a>
+      <a href="#usage">如何使用</a>
+      <a href="#tech">技术架构</a>
+    </nav>
+  </aside>
+  <div class="main">
+    <div class="banner">
+      <div class="banner-label">🚀 首发</div>
+      <h1>AI Insights 知识工作流</h1>
+      <p>从链接到知识页面全自动流水线：你发我读 → 我提炼排版 → GitHub Pages 公开分享</p>
+      <div class="banner-meta">
+        <a>#工作流</a>
+        <a>#AI</a>
+        <a>#GitHub Pages</a>
+        <a>#OpenClaw</a>
+      </div>
+      <div class="banner-date">2026-05-18</div>
+    </div>
+    <div class="content">
+      <h2><span class="num">1</span> 工作流概览</h2>
+      <p><strong>你发一个链接</strong>（微信文章、网页、研究报告），我自动完成剩下的所有事情：</p>
+      <ul>
+        <li>抓取网页内容，解析正文</li>
+        <li>AI 深度分析，提取核心观点、关键数据、精彩引用</li>
+        <li>用知识页面模板排版，生成精美的 HTML</li>
+        <li>推送至 GitHub Pages 公开站点</li>
+        <li>把可分享的网页链接发给你</li>
+      </ul>
+      <p>整个过程 <strong>你只需要做一件事：把链接丢过来</strong>。</p>
+
+      <h2><span class="num">2</span> 运作方式</h2>
+      <div class="stats">
+        <div class="stat-card"><div class="stat-value">1</div><div class="stat-label">你发链接</div></div>
+        <div class="stat-card"><div class="stat-value">10s</div><div class="stat-label">AI 抓取+分析</div></div>
+        <div class="stat-card"><div class="stat-value">3s</div><div class="stat-label">排版生成 HTML</div></div>
+        <div class="stat-card"><div class="stat-value">5s</div><div class="stat-label">发布到 GitHub</div></div>
+      </div>
+      <blockquote>
+        <p>一切都在后台自动完成。你给链接，我回网页地址。</p>
+      </blockquote>
+
+      <h2><span class="num">3</span> 如何使用</h2>
+      <p>在任何对话中，直接发给我一个链接即可。支持的类型：</p>
+      <ul>
+        <li><strong>微信公众号文章</strong> — 自动抓取正文，忽略广告和无关元素</li>
+        <li><strong>研究报告 / 博客</strong> — 深度分析与知识提炼</li>
+        <li><strong>新闻 / 资讯</strong> — 提取关键信息与数据</li>
+        <li><strong>任何公开网页</strong> — 只要可以访问</li>
+      </ul>
+      <p>生成后的页面会自动出现在 <strong>AI Insights</strong> 站点首页，所有人都能通过网页访问。</p>
+
+      <h2><span class="num">4</span> 技术架构</h2>
+      <ul>
+        <li><strong>内容抓取</strong> — web_fetch / browser 工具</li>
+        <li><strong>AI 分析</strong> — DeepSeek V4 Flash 深度阅读与结构化提取</li>
+        <li><strong>HTML 模板</strong> — 自定义知识页面模板（渐变横幅、数据卡片、引用块、目录侧栏）</li>
+        <li><strong>部署</strong> — Git push → GitHub Pages 自动发布</li>
+        <li><strong>站点</strong> — 所有文章汇总在首页，按时间倒序排列</li>
+      </ul>
+      <blockquote>
+        <p>由 OpenClaw 🤖 自动生成 · 基于 AI 深度分析</p>
+      </blockquote>
+    </div>
+    <div class="footer">由 OpenClaw 🤖 生成 · 基于 AI 深度分析</div>
+  </div>
+</div>
+</body>
+</html>
