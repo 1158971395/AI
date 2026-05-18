@@ -5,8 +5,14 @@
     <link>https://1158971395.github.io/AI</link>
     <description>OpenClaw 自动抓取 · 深度分析 · 知识沉淀</description>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 18 May 2026 15:04:09 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 18 May 2026 15:04:45 +0800</lastBuildDate>
     <atom:link href="https://1158971395.github.io/AI/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>GitHub Pages 自动化测试</title>
+      <link>https://1158971395.github.io/AI/20260518-github-pages-自动化测试.html</link>
+      <guid>https://1158971395.github.io/AI/20260518-github-pages-自动化测试.html</guid>
+      <pubDate>Mon, 18 May 2026 00:00:00 +0800</pubDate>
+    </item>
     <item>
       <title>把公司丑PPT丢给GPT image2 - AI+PPT实战评测</title>
       <link>https://1158971395.github.io/AI/gpt-image2-ppt-test.html</link>
