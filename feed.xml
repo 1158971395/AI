@@ -2,33 +2,33 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>AI Insights</title>
-    <link>https://1158971395.github.io/AI</link>
+    <link>https://jonathanxu.xyz</link>
     <description>OpenClaw 自动抓取 · 深度分析 · 知识沉淀</description>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 18 May 2026 17:37:07 +0800</lastBuildDate>
-    <atom:link href="https://1158971395.github.io/AI/feed.xml" rel="self" type="application/rss+xml"/>
+    <lastBuildDate>Tue, 19 May 2026 18:19:34 +0800</lastBuildDate>
+    <atom:link href="https://jonathanxu.xyz/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>GitHub Pages 自动化测试</title>
-      <link>https://1158971395.github.io/AI/20260518-github-pages-自动化测试.html</link>
-      <guid>https://1158971395.github.io/AI/20260518-github-pages-自动化测试.html</guid>
+      <link>https://jonathanxu.xyz/20260518-github-pages-自动化测试.html</link>
+      <guid>https://jonathanxu.xyz/20260518-github-pages-自动化测试.html</guid>
       <pubDate>Mon, 18 May 2026 00:00:00 +0800</pubDate>
     </item>
     <item>
       <title>揭秘全球首家AI原生银行：Ryt Bank 7个月破120万用户</title>
-      <link>https://1158971395.github.io/AI/20260518-揭秘全球首家ai原生银行ryt-bank-7个月破120万用户.html</link>
-      <guid>https://1158971395.github.io/AI/20260518-揭秘全球首家ai原生银行ryt-bank-7个月破120万用户.html</guid>
+      <link>https://jonathanxu.xyz/20260518-揭秘全球首家ai原生银行ryt-bank-7个月破120万用户.html</link>
+      <guid>https://jonathanxu.xyz/20260518-揭秘全球首家ai原生银行ryt-bank-7个月破120万用户.html</guid>
       <pubDate>Mon, 18 May 2026 00:00:00 +0800</pubDate>
     </item>
     <item>
       <title>把公司丑PPT丢给GPT image2 - AI+PPT实战评测</title>
-      <link>https://1158971395.github.io/AI/gpt-image2-ppt-test.html</link>
-      <guid>https://1158971395.github.io/AI/gpt-image2-ppt-test.html</guid>
+      <link>https://jonathanxu.xyz/gpt-image2-ppt-test.html</link>
+      <guid>https://jonathanxu.xyz/gpt-image2-ppt-test.html</guid>
       <pubDate>Mon, 18 May 2026 00:00:00 +0800</pubDate>
     </item>
     <item>
       <title>AI Insights 知识工作流</title>
-      <link>https://1158971395.github.io/AI/workflow.html</link>
-      <guid>https://1158971395.github.io/AI/workflow.html</guid>
+      <link>https://jonathanxu.xyz/workflow.html</link>
+      <guid>https://jonathanxu.xyz/workflow.html</guid>
       <pubDate>Mon, 18 May 2026 00:00:00 +0800</pubDate>
     </item>
   </channel>
