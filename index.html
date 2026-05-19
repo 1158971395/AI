@@ -25,8 +25,6 @@ body{
   background:var(--bg);color:var(--text);line-height:1.7;
   -webkit-font-smoothing:antialiased
 }
-
-/* Header */
 .site-header{
   background:var(--card-bg);border-bottom:1px solid var(--border);
   position:sticky;top:0;z-index:100;backdrop-filter:blur(12px)
@@ -42,8 +40,6 @@ nav a{color:var(--text-secondary);text-decoration:none;font-size:14px;font-weigh
 nav a:hover{color:var(--primary)}
 nav a.active{color:var(--primary);position:relative}
 nav a.active::after{content:'';position:absolute;bottom:-18px;left:0;right:0;height:2px;background:var(--primary);border-radius:1px}
-
-/* Hero */
 .hero{
   background:linear-gradient(135deg,#1a73e8 0%,#0d47a1 100%);
   color:#fff;padding:60px 24px;text-align:center
@@ -51,15 +47,9 @@ nav a.active::after{content:'';position:absolute;bottom:-18px;left:0;right:0;hei
 .hero h1{font-size:40px;font-weight:800;margin-bottom:12px;letter-spacing:-0.5px}
 .hero p{font-size:18px;opacity:0.9;max-width:600px;margin:0 auto;line-height:1.6}
 .hero .badge{display:inline-block;background:rgba(255,255,255,0.2);padding:4px 16px;border-radius:20px;font-size:13px;margin-top:16px}
-
-/* Container */
 .container{max-width:1200px;margin:0 auto;padding:40px 24px}
-
-/* Section title */
 .section-title{font-size:20px;font-weight:700;margin-bottom:20px;color:var(--text);display:flex;align-items:center;gap:8px}
 .section-title .line{flex:1;height:1px;background:var(--border)}
-
-/* Article grid */
 .article-grid{
   display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:20px
 }
@@ -84,8 +74,6 @@ nav a.active::after{content:'';position:absolute;bottom:-18px;left:0;right:0;hei
 .article-card p{font-size:14px;color:var(--text-secondary);line-height:1.5;flex:1;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
 .article-card .meta{display:flex;align-items:center;gap:12px;margin-top:12px;font-size:12px;color:var(--text-secondary)}
 .article-card .meta .dot{width:3px;height:3px;border-radius:50%;background:var(--border)}
-
-/* Footer */
 .site-footer{
   background:var(--card-bg);border-top:1px solid var(--border);
   padding:40px 24px;margin-top:60px
@@ -97,17 +85,6 @@ nav a.active::after{content:'';position:absolute;bottom:-18px;left:0;right:0;hei
 .footer-col a{display:block;font-size:13px;color:var(--text-secondary);text-decoration:none;padding:4px 0;transition:color .2s}
 .footer-col a:hover{color:var(--primary)}
 .footer-bottom{text-align:center;padding-top:24px;margin-top:24px;border-top:1px solid var(--border);font-size:12px;color:var(--text-secondary)}
-
-/* About page */
-.about-section{max-width:800px;margin:0 auto}
-.about-section h2{font-size:28px;font-weight:800;margin-bottom:20px}
-.about-section p{font-size:16px;color:var(--text-secondary);margin-bottom:16px;line-height:1.8}
-.about-section .highlight{background:var(--primary-light);padding:24px;border-radius:var(--radius);margin:24px 0}
-.about-section .highlight h3{color:var(--primary);margin-bottom:8px;font-size:16px}
-.about-section ul{list-style:none;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:16px 0}
-.about-section ul li{background:var(--card-bg);padding:16px;border-radius:8px;box-shadow:var(--shadow);font-size:14px;display:flex;align-items:center;gap:8px}
-
-/* Category pills */
 .category-pills{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px}
 .category-pill{
   padding:6px 16px;border-radius:20px;font-size:13px;font-weight:500;
@@ -116,32 +93,12 @@ nav a.active::after{content:'';position:absolute;bottom:-18px;left:0;right:0;hei
 }
 .category-pill:hover{border-color:var(--primary);color:var(--primary)}
 .category-pill.active{background:var(--primary);color:#fff;border-color:var(--primary)}
-
-/* Responsive */
 @media(max-width:768px){
   .hero h1{font-size:28px}
   .article-grid{grid-template-columns:1fr}
   .header-inner{overflow-x:auto;gap:16px}
   .footer-inner{grid-template-columns:1fr;gap:24px}
-  .about-section ul{grid-template-columns:1fr}
 }
-
-/* Article detail */
-.article-detail{max-width:800px;margin:0 auto;padding:40px 24px}
-.article-detail h1{font-size:32px;font-weight:800;line-height:1.3;margin-bottom:16px}
-.article-detail .meta{display:flex;align-items:center;gap:16px;font-size:14px;color:var(--text-secondary);margin-bottom:32px;flex-wrap:wrap}
-.article-detail .content{font-size:16px;line-height:1.9}
-.article-detail .content h2{font-size:22px;font-weight:700;margin:32px 0 12px;padding-bottom:8px;border-bottom:2px solid var(--primary-light)}
-.article-detail .content h3{font-size:18px;font-weight:600;margin:24px 0 8px}
-.article-detail .content p{margin-bottom:16px}
-.article-detail .content blockquote{border-left:4px solid var(--primary);padding:12px 20px;margin:16px 0;background:var(--primary-light);border-radius:0 8px 8px 0;font-style:italic}
-.article-detail .content blockquote cite{display:block;margin-top:8px;font-size:13px;color:var(--text-secondary);font-style:normal}
-.article-detail .content ul,.article-detail .content ol{padding-left:24px;margin-bottom:16px}
-.article-detail .content li{margin-bottom:6px}
-.article-detail .content table{width:100%;border-collapse:collapse;margin:16px 0;font-size:14px}
-.article-detail .content th,.article-detail .content td{padding:10px 14px;border:1px solid var(--border);text-align:left}
-.article-detail .content th{background:var(--primary-light);font-weight:600;color:var(--primary)}
-.article-detail .content img{max-width:100%;border-radius:8px;margin:16px 0}
 </style>
 </head>
 <body>
@@ -152,7 +109,7 @@ nav a.active::after{content:'';position:absolute;bottom:-18px;left:0;right:0;hei
     <nav>
       <a href="/" class="active">首页</a>
       <a href="/categories/金融科技">金融科技</a>
-      <a href="/categories/AI技�?>AI技�?/a>
+      <a href="/categories/AI技术">AI技术</a>
       <a href="/categories/商业分析">商业分析</a>
       <a href="/about">关于</a>
     </nav>
@@ -160,9 +117,9 @@ nav a.active::after{content:'';position:absolute;bottom:-18px;left:0;right:0;hei
 </header>
 
 <section class="hero">
-  <h1>AI 时代的深度阅�?/h1>
-  <p>自动抓取 · AI深度分析 · 知识沉淀。专注于AI行业前沿动态、金融科技与商业创新�?/p>
-  <div class="badge">📡 每日更新 · 已收�?3 篇文�?/div>
+  <h1>AI 时代的深度阅读</h1>
+  <p>自动抓取 · AI深度分析 · 知识沉淀。专注于AI行业前沿动态、金融科技与商业创新。</p>
+  <div class="badge">📡 每日更新 · 已收录 4 篇文章</div>
 </section>
 
 <div class="container">
@@ -170,41 +127,55 @@ nav a.active::after{content:'';position:absolute;bottom:-18px;left:0;right:0;hei
 <div class="category-pills">
   <a href="/" class="category-pill active">全部</a>
   <a href="/categories/金融科技" class="category-pill">金融科技</a>
-  <a href="/categories/AI技�? class="category-pill">AI技�?/a>
+  <a href="/categories/AI技术" class="category-pill">AI技术</a>
   <a href="/categories/商业分析" class="category-pill">商业分析</a>
 </div>
 
 <h2 class="section-title">
-  <span>📝 最新文�?/span>
+  <span>📝 最新文章</span>
   <span class="line"></span>
 </h2>
 
 <div class="article-grid">
 
-<a href="20260518-揭秘全球首家ai原生银行ryt-bank-7个月�?20万用�?html" class="article-card">
-  <div class="thumb">🏦</div>
+<a href="20260519-bigtech-ai-debt.html" class="article-card">
+  <div class="thumb">🏢</div>
   <div class="body">
-    <span class="tag">金融科技</span>
-    <h3>揭秘全球首家AI原生银行：Ryt Bank 7个月�?20万用�?/h3>
-    <p>2025�?月在马来西亚上线，对话即服务、自研大模型ILMU、蚂蚁数科赋能——AI原生银行正在重新定义金融体验�?/p>
+    <span class="tag">商业分析</span>
+    <h3>大厂迷途：2万亿砸下去，AI账还没算明白</h3>
+    <p>阿里杀红了眼在革自己的命，字节3.45亿月活却留不住人，腾讯最厚家底在等AI代理时代——三大厂各自困境深度剖析。</p>
     <div class="meta">
-      <span>2026-05-18</span>
+      <span>2026-05-13</span>
       <span class="dot"></span>
-      <span>轻金�?/span>
+      <span>赛格大道</span>
     </div>
   </div>
 </a>
 
-<a href="20260518-github-pages-自动化测�?html" class="article-card">
-  <div class="thumb">🚀</div>
+<a href="20260518-揭秘全球首家ai原生银行ryt-bank-7个月破120万用户.html" class="article-card">
+  <div class="thumb">🏦</div>
   <div class="body">
-    <span class="tag">AI技�?/span>
-    <h3>GitHub Pages + Cloudflare 自动化部署测�?/h3>
-    <p>自动化工作流搭建：从文章抓取到AI分析到自动发布，全流程零人工干预�?/p>
+    <span class="tag">金融科技</span>
+    <h3>揭秘全球首家AI原生银行：Ryt Bank 7个月破120万用户</h3>
+    <p>2025年8月在马来西亚上线，对话即服务、自研大模型ILMU、蚂蚁数科赋能——AI原生银行正在重新定义金融体验。</p>
     <div class="meta">
       <span>2026-05-18</span>
       <span class="dot"></span>
-      <span>技术笔�?/span>
+      <span>轻金融</span>
+    </div>
+  </div>
+</a>
+
+<a href="20260518-github-pages-自动化测试.html" class="article-card">
+  <div class="thumb">🚀</div>
+  <div class="body">
+    <span class="tag">AI技术</span>
+    <h3>GitHub Pages + Cloudflare 自动化部署测试</h3>
+    <p>自动化工作流搭建：从文章抓取到AI分析到自动发布，全流程零人工干预。</p>
+    <div class="meta">
+      <span>2026-05-18</span>
+      <span class="dot"></span>
+      <span>技术笔记</span>
     </div>
   </div>
 </a>
@@ -214,7 +185,7 @@ nav a.active::after{content:'';position:absolute;bottom:-18px;left:0;right:0;hei
   <div class="body">
     <span class="tag">商业分析</span>
     <h3>把公司丑PPT丢给GPT image2 - AI+PPT实战评测</h3>
-    <p>实测GPT-4o原生图像生成能力改造PPT幻灯片，从丑到美的全流程记录�?/p>
+    <p>实测GPT-4o原生图像生成能力改造PPT幻灯片，从丑到美的全流程记录。</p>
     <div class="meta">
       <span>2026-05-18</span>
       <span class="dot"></span>
@@ -226,32 +197,17 @@ nav a.active::after{content:'';position:absolute;bottom:-18px;left:0;right:0;hei
 <a href="workflow.html" class="article-card">
   <div class="thumb">⚙️</div>
   <div class="body">
-    <span class="tag">AI技�?/span>
-    <h3>AI Insights 知识工作�?/h3>
-    <p>一文读懂：链接→抓取→AI分析→生成网页→推送→发布的全自动化流程�?/p>
+    <span class="tag">AI技术</span>
+    <h3>AI Insights 知识工作流</h3>
+    <p>一文读懂：链接→抓取→AI分析→生成网页→推送→发布的全自动化流程。</p>
     <div class="meta">
       <span>2026-05-18</span>
       <span class="dot"></span>
-      <span>工作�?/span>
+      <span>工作流</span>
     </div>
   </div>
 </a>
 
-  <a href="20260519-大厂迷途ai�?html" class="article-card">
-  <div class="thumb">🏢</div>
-  <div class="body">
-    <span class="tag">商业分析</span>
-    <h3>大厂迷途：2万亿砸下去，AI账还没算明白</h3>
-    <p>阿里杀红了眼在革自己的命，字节3.45亿月活却留不住人，腾讯最厚家底在等AI代理时代——三大厂各自困境深度剖析�?/p>
-    <div class="meta">
-      <span>2026-05-13</span>
-      <span class="dot"></span>
-      <span>赛格大道</span>
-    </div>
-  </div>
-</a>
-
-  <!-- articles will appear here -->
 </div>
 </div>
 
@@ -259,22 +215,22 @@ nav a.active::after{content:'';position:absolute;bottom:-18px;left:0;right:0;hei
   <div class="footer-inner">
     <div class="footer-brand">
       <h3>🧠 AI Insights</h3>
-      <p>�?OpenClaw 🤖 自动驱动 · 每天从互联网抓取优质内容，AI深度分析后整理为结构化知识，沉淀在此�?/p>
+      <p>由 OpenClaw 🤖 自动驱动 · 每天从互联网抓取优质内容，AI深度分析后整理为结构化知识，沉淀在此。</p>
     </div>
     <div class="footer-col">
       <h4>分类</h4>
       <a href="/categories/金融科技">金融科技</a>
-      <a href="/categories/AI技�?>AI技�?/a>
+      <a href="/categories/AI技术">AI技术</a>
       <a href="/categories/商业分析">商业分析</a>
     </div>
     <div class="footer-col">
       <h4>关于</h4>
       <a href="/about">关于本站</a>
-      <a href="/workflow">工作流说�?/a>
+      <a href="/workflow">工作流说明</a>
     </div>
   </div>
   <div class="footer-bottom">
-    © 2026 AI Insights · �?AI 自动生成，仅供参�?
+    © 2026 AI Insights · 由 AI 自动生成，仅供参考
   </div>
 </footer>
 
