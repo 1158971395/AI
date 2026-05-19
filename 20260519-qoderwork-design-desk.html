@@ -3,123 +3,67 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>阿里下场做了一款 Claude Design · 深度分析</title>
-<style>
-:root{--primary:#1a73e8;--primary-dark:#1557b0;--primary-light:#e8f0fe;--bg:#f8f9fa;--card-bg:#fff;--text:#202124;--text-secondary:#5f6368;--border:#e0e0e0;--radius:12px;--shadow:0 1px 3px rgba(0,0,0,.08),0 1px 2px rgba(0,0,0,.06)}
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:-apple-system,"PingFang SC","Noto Sans SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--text);line-height:1.8;-webkit-font-smoothing:antialiased}
-.site-header{background:var(--card-bg);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100}
-.header-inner{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;align-items:center;height:60px;gap:32px}
-.site-logo{font-size:22px;font-weight:800;color:var(--primary);text-decoration:none;display:flex;align-items:center;gap:8px}
-nav{display:flex;gap:24px;flex:1}nav a{color:var(--text-secondary);text-decoration:none;font-size:14px;font-weight:500}nav a:hover{color:var(--primary)}
-.container{max-width:900px;margin:0 auto;padding:40px 24px}
-.article-header{margin-bottom:40px}
-.article-header .tag{display:inline-block;background:var(--primary-light);color:var(--primary);padding:3px 12px;border-radius:4px;font-size:12px;font-weight:600;margin-bottom:12px}
-.article-header h1{font-size:30px;font-weight:800;line-height:1.3;margin-bottom:12px}
-.article-header .meta{display:flex;align-items:center;gap:16px;font-size:14px;color:var(--text-secondary);flex-wrap:wrap}
-.article-header .meta .dot{width:3px;height:3px;border-radius:50%;background:var(--border)}
-.article-header .excerpt{background:var(--primary-light);padding:20px 24px;border-radius:var(--radius);margin:20px 0;font-size:15px;line-height:1.7;border-left:4px solid var(--primary)}
-.summary-img{text-align:center;margin:0 0 24px}
-.summary-img img{max-width:400px;max-height:280px;width:auto;border-radius:12px;box-shadow:var(--shadow)}
-.content{font-size:16px;line-height:1.9}
-.content h2{font-size:24px;font-weight:700;margin:40px 0 16px;padding-bottom:10px;border-bottom:2px solid var(--primary-light);color:var(--primary-dark)}
-.content h3{font-size:18px;font-weight:600;margin:28px 0 12px}
-.content p{margin-bottom:16px;word-break:break-word}
-.content blockquote{border-left:4px solid var(--primary);padding:16px 20px;margin:20px 0;background:var(--primary-light);border-radius:0 8px 8px 0;font-style:italic;color:var(--text-secondary)}
-.content blockquote cite{display:block;margin-top:8px;font-size:13px;color:var(--primary);font-style:normal;font-weight:600}
-.content ul,.content ol{padding-left:24px;margin-bottom:16px}.content li{margin-bottom:8px}
-.content .highlight-box{background:var(--card-bg);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow);margin:16px 0;border-left:4px solid var(--primary)}
-.content .highlight-box h4{color:var(--primary);margin-bottom:6px;font-size:15px}
-.content .highlight-box p{font-size:14px;color:var(--text-secondary);margin:0}
-.site-footer{text-align:center;padding:24px;font-size:13px;color:var(--text-secondary);border-top:1px solid var(--border);margin-top:60px}
-.back{display:inline-block;margin-bottom:24px;color:var(--primary);text-decoration:none;font-size:14px;font-weight:500}
-@media(max-width:768px){.article-header h1{font-size:22px}}
-</style>
+<title>阿里下场做了一款 Claude Design，有不少创新</title>
+<link rel="stylesheet" href="/style.css">
 </head>
 <body>
-<header class="site-header">
-  <div class="header-inner">
-    <a href="/" class="site-logo">🧠 AI Insights</a>
-    <nav>
-      <a href="/">首页</a>
-      <a href="/categories/金融科技">金融科技</a>
-      <a href="/categories/商业分析">商业分析</a>
-      <a href="/about">关于</a>
-    </nav>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/" class="site-logo">Jonathan Xu</a>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="https://github.com/1158971395" target="_blank" rel="noopener">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+<article class="article-page">
+  <a href="/" class="article-back">&larr; Back</a>
+  <span class="article-category">AI技术</span>
+  <h1 class="article-title">阿里下场做了一款 Claude Design，有不少创新</h1>
+  <div class="article-meta">2026-05-19 <span class="dot">·</span> AI产品阿颖</div>
+  <img class="article-cover" src="/qoderwork-design-desk.png" alt="阿里下场做了一款 Claude Design，有不少创新" loading="lazy">
+  <div class="article-body">
+    <h2>什么是 Design Desk？</h2>
+    <p>阿里 QoderWork 上线的 Design Desk，是一个类似 Claude Design 的 AI 原生工具：用自然语言表达想法，直接生成 UI 设计和前端代码。</p>
+    
+    <h2>三个核心创新</h2>
+    <div class="highlight-box">
+    <h4>① 产物是前端工程代码</h4>
+    <p>Claude Design 停留在 HTML 层。QoderWork 支持 React、Vue 等框架，出的是可直接进入研发工作流的工程代码。</p>
+    </div>
+    <div class="highlight-box">
+    <h4>② 画布式迭代</h4>
+    <p>在画布上圈选区域、用画笔或文字标注修改意图，AI 看到即改。</p>
+    </div>
+    <div class="highlight-box">
+    <h4>③ 150+ 套 DESIGN.md 模板</h4>
+    <p>字体、颜色、间距、组件风格全部写成明文规则，AI 不再猜"更高级一点"是什么意思。</p>
+    </div>
+    
+    <h2>工作流</h2>
+    <ol>
+    <li><strong>需求澄清</strong> — AI 先思考推理，对模糊的地方逐条追问确认</li>
+    <li><strong>设计计划</strong> — 列出布局结构、风格方向、内容层级</li>
+    <li><strong>局部打磨</strong> — 圈选 + 自然语言，画布上实时修改</li>
+    </ol>
+    
+    <blockquote>发展到今天，AI 已经重构了整个软件研发的全流程，而不只是 Coding 这一部分。<cite>— AI产品阿颖</cite></blockquote>
+    <div class="original-link">📎 <a href="https://mp.weixin.qq.com/s/9OhQcNH5hswNlYoUxfIsJQ" target="_blank" rel="noopener">View original</a></div>
   </div>
-</header>
 
-<div class="container">
-  <a href="/" class="back">← 返回首页</a>
+  <nav class="article-nav">
+    <div class="nav-prev"></div>
+    <div class="nav-home"><a href="/">Home</a></div>
+    <div class="nav-next"></div>
+  </nav>
+</article>
 
-  <article>
-    <div class="article-header">
-      <span class="tag">AI技术</span>
-      <h1>阿里下场做了一款 Claude Design，有不少创新</h1>
-      <div class="meta">
-        <span>2026-05-19</span>
-        <span class="dot"></span>
-        <span>阿颖</span>
-        <span class="dot"></span>
-        <span>AI产品阿颖</span>
-      </div>
-      <div class="excerpt">
-        <strong>一句话：</strong>阿里 QoderWork 推出 Design Desk，用自然语言直接生成 UI 设计和前端工程代码——比 Claude Design 多走了三步。
-      </div>
+  <footer class="site-footer">
+    <p>&copy; 2026 Jonathan Xu &middot; <a href="/about">About</a></p>
+  </footer>
 
-      <div class="summary-img">
-        <img src="/qoderwork-design-desk.png" alt="QoderWork Design Desk">
-      </div>
-    </div>
-
-    <div class="content">
-
-      <h2>什么是 Design Desk？</h2>
-      <p>阿里 QoderWork 上线的 Design Desk（设计工作台），是一个类似 Claude Design 的 AI 原生工具：用自然语言表达想法，直接生成 UI 设计和前端代码。</p>
-      <p>传统设计工具（Figma 等）围绕矢量编辑 + 云端协作，但设计→交接→前端还原的流程中，信息大量损耗。新一代产品的思路是<strong>"设计即代码"</strong>——交付物是可运行、可编辑、可交付的工程文件。</p>
-
-      <h2>三个核心创新</h2>
-
-      <div class="highlight-box">
-        <h4>① 产物是前端工程代码</h4>
-        <p>Claude Design 停留在 HTML 层，对成体系的前端团队价值有限。QoderWork 支持 React、Vue 等框架，出的是可以直接进入研发工作流的工程代码。</p>
-      </div>
-
-      <div class="highlight-box">
-        <h4>② 画布式迭代</h4>
-        <p>在画布上圈选区域、用画笔或文字标注修改意图，AI 看到即改。体验跟在 Figma 里与人协作差不多，比 Claude Design 的纯 HTML 预览自由得多。</p>
-      </div>
-
-      <div class="highlight-box">
-        <h4>③ 150+ 套 DESIGN.md 模板</h4>
-        <p>字体、颜色、间距、组件风格全部写成明文规则交给 AI。AI 不再猜"更高级一点"是什么意思，照着规则执行就行。</p>
-      </div>
-
-      <h2>工作流</h2>
-      <ol>
-        <li><strong>需求澄清</strong> — AI 先思考推理，针对模糊的地方逐条追问确认</li>
-        <li><strong>设计计划</strong> — 列出布局结构、风格方向、内容层级、信息块拆分，主动确认</li>
-        <li><strong>局部打磨</strong> — 圈选 + 自然语言，画布上实时修改</li>
-      </ol>
-
-      <h2>真实案例：AI Maker Summit 上海站</h2>
-      <p>基于深圳站官网设计上海站官网，要求增量创新但延续主色调和内容结构。QoderWork 先访问深圳站官网了解信息，再做需求澄清，生成完整设计计划后执行。关键细节：粒子浮动背景、上海天际线 SVG、磨砂玻璃卡片效果。</p>
-
-      <blockquote>
-        发展到今天，AI 已经重构了整个软件研发的全流程，而不只是 Coding 这一部分。
-        <cite>— AI产品阿颖</cite>
-      </blockquote>
-
-      <h2>来源</h2>
-      <p>原文：<a href="https://mp.weixin.qq.com/s/9OhQcNH5hswNlYoUxfIsJQ" target="_blank" rel="noopener" style="color:var(--primary)">阿里下场做了一款 Claude Design，有不少创新</a></p>
-      <p>作者：阿颖 · AI产品阿颖 · 2026-05-19</p>
-      <p style="margin-top:12px;font-size:13px">📎 <a href="https://mp.weixin.qq.com/s/9OhQcNH5hswNlYoUxfIsJQ" target="_blank" rel="noopener" style="color:var(--primary)">原文链接</a></p>
-    </div>
-  </article>
-</div>
-
-<footer class="site-footer">
-  © 2026 AI Insights · 由 OpenClaw 🤖 自动驱动
-</footer>
 </body>
 </html>

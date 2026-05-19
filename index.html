@@ -3,224 +3,80 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI Insights · 深度阅读</title>
-<style>
-:root {
-  --primary: #1a73e8;
-  --primary-dark: #1557b0;
-  --primary-light: #e8f0fe;
-  --bg: #f8f9fa;
-  --card-bg: #fff;
-  --text: #202124;
-  --text-secondary: #5f6368;
-  --border: #e0e0e0;
-  --accent: #34a853;
-  --radius: 12px;
-  --shadow: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.06);
-  --shadow-hover: 0 4px 16px rgba(0,0,0,0.1);
-}
-*{margin:0;padding:0;box-sizing:border-box}
-body{
-  font-family:-apple-system,"PingFang SC","Noto Sans SC","Microsoft YaHei",sans-serif;
-  background:var(--bg);color:var(--text);line-height:1.7;
-  -webkit-font-smoothing:antialiased
-}
-.site-header{
-  background:var(--card-bg);border-bottom:1px solid var(--border);
-  position:sticky;top:0;z-index:100;backdrop-filter:blur(12px)
-}
-.header-inner{
-  max-width:1200px;margin:0 auto;padding:0 24px;
-  display:flex;align-items:center;height:60px;gap:32px
-}
-.site-logo{font-size:22px;font-weight:800;color:var(--primary);text-decoration:none;display:flex;align-items:center;gap:8px}
-.site-logo:hover{opacity:0.85}
-nav{display:flex;gap:24px;flex:1}
-nav a{color:var(--text-secondary);text-decoration:none;font-size:14px;font-weight:500;transition:color .2s}
-nav a:hover{color:var(--primary)}
-nav a.active{color:var(--primary);position:relative}
-nav a.active::after{content:'';position:absolute;bottom:-18px;left:0;right:0;height:2px;background:var(--primary);border-radius:1px}
-.hero{
-  background:linear-gradient(135deg,#1a73e8 0%,#0d47a1 100%);
-  color:#fff;padding:60px 24px;text-align:center
-}
-.hero h1{font-size:40px;font-weight:800;margin-bottom:12px;letter-spacing:-0.5px}
-.hero p{font-size:18px;opacity:0.9;max-width:600px;margin:0 auto;line-height:1.6}
-.hero .badge{display:inline-block;background:rgba(255,255,255,0.2);padding:4px 16px;border-radius:20px;font-size:13px;margin-top:16px}
-.container{max-width:1200px;margin:0 auto;padding:40px 24px}
-.section-title{font-size:20px;font-weight:700;margin-bottom:20px;color:var(--text);display:flex;align-items:center;gap:8px}
-.section-title .line{flex:1;height:1px;background:var(--border)}
-.article-grid{
-  display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:20px
-}
-.article-card{
-  background:var(--card-bg);border-radius:var(--radius);
-  box-shadow:var(--shadow);overflow:hidden;transition:all .3s;
-  cursor:pointer;text-decoration:none;color:inherit;
-  display:flex;flex-direction:column
-}
-.article-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-hover)}
-.article-card .thumb{
-  width:100%;height:180px;object-fit:cover;background:var(--primary-light);
-  display:flex;align-items:center;justify-content:center;
-  font-size:48px;color:var(--primary)
-}
-.article-card .body{padding:20px;flex:1;display:flex;flex-direction:column}
-.article-card .tag{
-  display:inline-block;background:var(--primary-light);color:var(--primary);
-  padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;margin-bottom:8px;width:fit-content
-}
-.article-card h3{font-size:17px;font-weight:700;line-height:1.4;margin-bottom:8px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
-.article-card p{font-size:14px;color:var(--text-secondary);line-height:1.5;flex:1;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
-.article-card .meta{display:flex;align-items:center;gap:12px;margin-top:12px;font-size:12px;color:var(--text-secondary)}
-.article-card .meta .dot{width:3px;height:3px;border-radius:50%;background:var(--border)}
-.site-footer{
-  background:var(--card-bg);border-top:1px solid var(--border);
-  padding:40px 24px;margin-top:60px
-}
-.footer-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px}
-.footer-brand h3{font-size:18px;font-weight:700;color:var(--primary);margin-bottom:8px}
-.footer-brand p{font-size:13px;color:var(--text-secondary);line-height:1.6}
-.footer-col h4{font-size:14px;font-weight:600;margin-bottom:12px;color:var(--text)}
-.footer-col a{display:block;font-size:13px;color:var(--text-secondary);text-decoration:none;padding:4px 0;transition:color .2s}
-.footer-col a:hover{color:var(--primary)}
-.footer-bottom{text-align:center;padding-top:24px;margin-top:24px;border-top:1px solid var(--border);font-size:12px;color:var(--text-secondary)}
-.category-pills{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px}
-.category-pill{
-  padding:6px 16px;border-radius:20px;font-size:13px;font-weight:500;
-  background:var(--card-bg);border:1px solid var(--border);color:var(--text-secondary);
-  cursor:pointer;transition:all .2s;text-decoration:none
-}
-.category-pill:hover{border-color:var(--primary);color:var(--primary)}
-.category-pill.active{background:var(--primary);color:#fff;border-color:var(--primary)}
-@media(max-width:768px){
-  .hero h1{font-size:28px}
-  .article-grid{grid-template-columns:1fr}
-  .header-inner{overflow-x:auto;gap:16px}
-  .footer-inner{grid-template-columns:1fr;gap:24px}
-}
-</style>
+<title>Jonathan Xu</title>
+<link rel="stylesheet" href="/style.css">
 </head>
 <body>
 
-<header class="site-header">
-  <div class="header-inner">
-    <a href="/" class="site-logo">🧠 AI Insights</a>
-    <nav>
-      <a href="/" class="active">首页</a>
-      <a href="/categories/金融科技">金融科技</a>
-      
-      <a href="/categories/商业分析">商业分析</a>
-      <a href="/about">关于</a>
-    </nav>
-  </div>
-</header>
-
-<section class="hero">
-  <h1>AI 时代的深度阅读</h1>
-  <p>自动抓取 · AI深度分析 · 知识沉淀。专注于AI行业前沿动态、金融科技与商业创新。</p>
-  <div class="badge">📡 每日更新 · 已收录 3 篇文章</div>
-</section>
-
-<div class="container">
-
-<div class="category-pills">
-  <a href="/" class="category-pill active">全部</a>
-  <a href="/categories/金融科技" class="category-pill">金融科技</a>
-  
-  <a href="/categories/商业分析" class="category-pill">商业分析</a>
-</div>
-
-<h2 class="section-title">
-  <span>📝 最新文章</span>
-  <span class="line"></span>
-</h2>
-
-<div class="article-grid">
-
-<a href="20260519-30wan-leek-law.html" class="article-card">
-  <div class="thumb" style="background-image:url('/30wan-leek-law.png');background-size:cover;background-position:center;font-size:0">🚗</div>
-  <div class="body">
-    <span class="tag">社会观察</span>
-    <h3>沈阳外卖小哥跑单3年全款买奥迪，精准踩中"30万韭菜定律"</h3>
-    <p>普通人攒到30万后最容易陷入消费陷阱——身份焦虑驱动消费，第一桶金应用来铺路而非证明自己。</p>
-    <div class="meta">
-      <span>2026-05-19</span>
-      <span class="dot"></span>
-      <span>洞见</span>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/" class="site-logo">Jonathan Xu</a>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="https://github.com/1158971395" target="_blank" rel="noopener">GitHub</a>
+      </nav>
     </div>
+  </header>
+
+<main class="home-container">
+  <div class="home-header">
+    <h1>Jonathan Xu</h1>
+    <p>深度阅读 · AI分析 · 知识沉淀</p>
   </div>
-</a>
 
-<a href="20260519-qoderwork-design-desk.html" class="article-card">
-  <div class="thumb" style="background-image:url('/qoderwork-design-desk.png');background-size:cover;background-position:center;font-size:0">🎨</div>
-  <div class="body">
-    <span class="tag">AI技术</span>
-    <h3>阿里下场做了一款 Claude Design，有不少创新</h3>
-    <p>阿里QoderWork推出Design Desk，用自然语言生成UI设计和前端代码——比Claude Design多走了三步。</p>
-    <div class="meta">
-      <span>2026-05-19</span>
-      <span class="dot"></span>
-      <span>AI产品阿颖</span>
-    </div>
+  <div class="article-feed">
+    <a href="20260519-30wan-leek-law.html" class="article-feed-item">
+      <div class="article-feed-body">
+        <span class="article-feed-category">社会观察</span>
+        <h2 class="article-feed-title">沈阳外卖小哥跑单3年全款买奥迪，精准踩中"30万韭菜定律"</h2>
+        <p class="article-feed-excerpt">普通人攒到30万后最容易陷入消费陷阱——身份焦虑驱动消费，第一桶金应用来铺路而非证明自己。</p>
+        <div class="article-feed-meta">2026-05-19 · 洞见</div>
+      </div>
+      <div class="article-feed-thumb" style="background-image:url('/30wan-leek-law.png')"></div>
+    </a>
+    <a href="20260519-hangzhou-15-5-plan.html" class="article-feed-item">
+      <div class="article-feed-body">
+        <span class="article-feed-category">城市战略</span>
+        <h2 class="article-feed-title">事关杭州未来五年发展：这场发布会为你划重点</h2>
+        <p class="article-feed-excerpt">杭州十五五规划：支持DeepSeek迭代、5000亿产业基金、Token经济新赛道——城市级AI战略竞争抢跑。</p>
+        <div class="article-feed-meta">2026-05-19 · 浙江发布</div>
+      </div>
+      <div class="article-feed-thumb" style="background-image:url('/hangzhou-15-5-plan.png')"></div>
+    </a>
+    <a href="20260519-qoderwork-design-desk.html" class="article-feed-item">
+      <div class="article-feed-body">
+        <span class="article-feed-category">AI技术</span>
+        <h2 class="article-feed-title">阿里下场做了一款 Claude Design，有不少创新</h2>
+        <p class="article-feed-excerpt">阿里QoderWork推出Design Desk，用自然语言生成UI设计和前端工程代码——比Claude Design多走了三步。</p>
+        <div class="article-feed-meta">2026-05-19 · AI产品阿颖</div>
+      </div>
+      <div class="article-feed-thumb" style="background-image:url('/qoderwork-design-desk.png')"></div>
+    </a>
+    <a href="20260519-bigtech-ai-debt.html" class="article-feed-item">
+      <div class="article-feed-body">
+        <span class="article-feed-category">商业分析</span>
+        <h2 class="article-feed-title">大厂迷途：2万亿砸下去，AI账还没算明白</h2>
+        <p class="article-feed-excerpt">阿里杀红了眼在革自己的命，字节3.45亿月活却留不住人，腾讯最厚家底在等AI代理时代。</p>
+        <div class="article-feed-meta">2026-05-13 · 赛格大道</div>
+      </div>
+      <div class="article-feed-thumb" style="background-image:url('/bigtech-ai-debt.png')"></div>
+    </a>
+    <a href="20260518-揭秘全球首家ai原生银行ryt-bank-7个月破120万用户.html" class="article-feed-item">
+      <div class="article-feed-body">
+        <span class="article-feed-category">金融科技</span>
+        <h2 class="article-feed-title">揭秘全球首家AI原生银行：Ryt Bank 7个月破120万用户</h2>
+        <p class="article-feed-excerpt">2025年8月马来西亚上线，对话即服务、自研大模型ILMU、蚂蚁数科赋能。</p>
+        <div class="article-feed-meta">2026-05-18 · 轻金融</div>
+      </div>
+      <div class="article-feed-thumb" style="background-image:url('/ryt-bank-summary.png')"></div>
+    </a>
   </div>
-</a>
+</main>
 
-<a href="20260519-bigtech-ai-debt.html" class="article-card">
-  <div class="thumb" style="background-image:url('/bigtech-ai-debt.png');background-size:cover;background-position:center;font-size:0">🏢</div>
-  <div class="body">
-    <span class="tag">商业分析</span>
-    <h3>大厂迷途：2万亿砸下去，AI账还没算明白</h3>
-    <p>阿里杀红了眼在革自己的命，字节3.45亿月活却留不住人，腾讯最厚家底在等AI代理时代——三大厂各自困境深度剖析。</p>
-    <div class="meta">
-      <span>2026-05-13</span>
-      <span class="dot"></span>
-      <span>赛格大道</span>
-    </div>
-  </div>
-</a>
-
-<a href="20260518-揭秘全球首家ai原生银行ryt-bank-7个月破120万用户.html" class="article-card">
-  <div class="thumb" style="background-image:url('/ryt-bank-summary.png');background-size:cover;background-position:center;font-size:0">🏦</div>
-  <div class="body">
-    <span class="tag">金融科技</span>
-    <h3>揭秘全球首家AI原生银行：Ryt Bank 7个月破120万用户</h3>
-    <p>2025年8月在马来西亚上线，对话即服务、自研大模型ILMU、蚂蚁数科赋能——AI原生银行正在重新定义金融体验。</p>
-    <div class="meta">
-      <span>2026-05-18</span>
-      <span class="dot"></span>
-      <span>轻金融</span>
-    </div>
-  </div>
-</a>
-
-
-
-</div>
-</div>
-
-<footer class="site-footer">
-  <div class="footer-inner">
-    <div class="footer-brand">
-      <h3>🧠 AI Insights</h3>
-      <p>由 OpenClaw 🤖 自动驱动 · 每天从互联网抓取优质内容，AI深度分析后整理为结构化知识，沉淀在此。</p>
-    </div>
-    <div class="footer-col">
-      <h4>分类</h4>
-      <a href="/categories/金融科技">金融科技</a>
-      <a href="/categories/AI技术">AI技术</a>
-      <a href="/categories/商业分析">商业分析</a>
-    </div>
-    <div class="footer-col">
-      <h4>关于</h4>
-      <a href="/about">关于本站</a>
-      <a href="/workflow">工作流说明</a>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    © 2026 AI Insights · 由 AI 自动生成，仅供参考
-  </div>
-</footer>
+  <footer class="site-footer">
+    <p>&copy; 2026 Jonathan Xu &middot; <a href="/about">About</a></p>
+  </footer>
 
 </body>
 </html>

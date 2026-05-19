@@ -3,87 +3,47 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>关于 · AI Insights</title>
-<style>
-:root{--primary:#1a73e8;--primary-dark:#1557b0;--primary-light:#e8f0fe;--bg:#f8f9fa;--card-bg:#fff;--text:#202124;--text-secondary:#5f6368;--border:#e0e0e0;--radius:12px;--shadow:0 1px 3px rgba(0,0,0,.08),0 1px 2px rgba(0,0,0,.06)}
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:-apple-system,"PingFang SC","Noto Sans SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--text);line-height:1.7;-webkit-font-smoothing:antialiased}
-.site-header{background:var(--card-bg);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100}
-.header-inner{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;align-items:center;height:60px;gap:32px}
-.site-logo{font-size:22px;font-weight:800;color:var(--primary);text-decoration:none;display:flex;align-items:center;gap:8px}
-.site-logo:hover{opacity:.85}
-nav{display:flex;gap:24px;flex:1}
-nav a{color:var(--text-secondary);text-decoration:none;font-size:14px;font-weight:500}
-nav a:hover,nav a.active{color:var(--primary)}
-.container{max-width:800px;margin:0 auto;padding:60px 24px}
-h1{font-size:36px;font-weight:800;margin-bottom:8px}
-.subtitle{color:var(--text-secondary);font-size:16px;margin-bottom:40px}
-.section{margin-bottom:40px}
-.section h2{font-size:22px;font-weight:700;margin-bottom:16px;padding-bottom:8px;border-bottom:2px solid var(--primary-light);color:var(--primary)}
-.section p{font-size:15px;color:var(--text-secondary);margin-bottom:12px;line-height:1.8}
-.card{background:var(--card-bg);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow);margin-bottom:16px}
-.card h3{font-size:16px;font-weight:600;margin-bottom:8px}
-.card p{font-size:14px;color:var(--text-secondary);margin:0}
-.site-footer{background:var(--card-bg);border-top:1px solid var(--border);padding:24px;text-align:center;font-size:13px;color:var(--text-secondary);margin-top:40px}
-.flow-steps{list-style:none;padding:0;counter-reset:step}
-.flow-steps li{counter-increment:step;padding:16px 20px 16px 56px;position:relative;margin-bottom:12px;background:var(--card-bg);border-radius:8px;box-shadow:var(--shadow);font-size:14px}
-.flow-steps li::before{content:counter(step);position:absolute;left:16px;top:16px;width:28px;height:28px;background:var(--primary);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700}
-</style>
+<title>About · Jonathan Xu</title>
+<link rel="stylesheet" href="/style.css">
 </head>
 <body>
-<header class="site-header">
-  <div class="header-inner">
-    <a href="/" class="site-logo">🧠 AI Insights</a>
-    <nav>
-      <a href="/">首页</a>
-      <a href="/categories/金融科技">金融科技</a>
-      <a href="/categories/AI技术">AI技术</a>
-      <a href="/categories/商业分析">商业分析</a>
-      <a href="/about" class="active">关于</a>
-    </nav>
-  </div>
-</header>
 
-<div class="container">
-  <h1>关于 AI Insights</h1>
-  <p class="subtitle">一个由 AI 驱动的自动化知识沉淀平台</p>
-
-  <div class="section">
-    <h2>🤖 这是什么？</h2>
-    <p>AI Insights 是一个全自动化的知识库网站。每天从互联网抓取优质文章（微信、博客、研究报告等），经过 AI 深度分析后，整理为结构化的知识页面并自动发布。</p>
-    <p>核心目标：把碎片化的信息变为结构化的知识，节省你的阅读时间。</p>
-  </div>
-
-  <div class="section">
-    <h2>⚙️ 工作流程</h2>
-    <ol class="flow-steps">
-      <li><strong>抓取</strong> — 自动抓取你分享的链接内容</li>
-      <li><strong>分析</strong> — AI 深度阅读，提取精华观点与关键数据</li>
-      <li><strong>归档</strong> — 保存到 Obsidian 知识库，形成个人知识体系</li>
-      <li><strong>生成</strong> — 用 GPT-4o Image2 生成专业风格总结图</li>
-      <li><strong>发布</strong> — HTML 页面自动部署到 Cloudflare Pages</li>
-      <li><strong>交付</strong> — 返回文章链接 + 总结图，完成闭环</li>
-    </ol>
-  </div>
-
-  <div class="section">
-    <h2>🔧 技术栈</h2>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
-      <div class="card"><h3>💡 AI 引擎</h3><p>DeepSeek V4 Flash/Pro · ChatGPT GPT-4o Image2</p></div>
-      <div class="card"><h3>📡 抓取</h3><p>OpenClaw · Web Fetch · Browser Automation</p></div>
-      <div class="card"><h3>💾 知识库</h3><p>Obsidian · Markdown · 本地归档</p></div>
-      <div class="card"><h3>🌐 发布</h3><p>GitHub · Cloudflare Pages · jonathanxu.xyz</p></div>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/" class="site-logo">Jonathan Xu</a>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="https://github.com/1158971395" target="_blank" rel="noopener">GitHub</a>
+      </nav>
     </div>
-  </div>
+  </header>
 
-  <div class="section">
-    <h2>📬 联系</h2>
-    <p>本站内容由 AI 自动生成，仅供参考。如有任何问题或建议，欢迎通过 GitHub 提交 Issue。</p>
-  </div>
-</div>
+<main class="about-page">
+  <a href="/" class="article-back" style="display:inline-block;font-size:14px;color:var(--text-secondary);text-decoration:none;margin-bottom:32px">&larr; Back</a>
+  <h1>About</h1>
+  <p class="subtitle">一个 AI 驱动的自动化知识沉淀平台</p>
 
-<footer class="site-footer">
-  © 2026 AI Insights · 由 OpenClaw 🤖 自动驱动
-</footer>
+  <h2>🤖 这是什么？</h2>
+  <p>AI Insights 是一个全自动化知识库网站。每天从互联网抓取优质文章，经过 AI 深度分析后，整理为结构化知识页面并自动发布。</p>
+
+  <h2>⚙️ 工作流程</h2>
+  <ol class="flow-steps">
+    <li><strong>1</strong> 自动抓取你分享的链接内容</li>
+    <li><strong>2</strong> AI 深度阅读，提取精华观点与关键数据</li>
+    <li><strong>3</strong> 保存到 Obsidian 知识库</li>
+    <li><strong>4</strong> GPT-4o 生成专业风格总结图</li>
+    <li><strong>5</strong> 部署到 Cloudflare Pages</li>
+    <li><strong>6</strong> 返回文章链接 + 总结图</li>
+  </ol>
+
+  <h2>🔧 技术栈</h2>
+  <p>AI 引擎：DeepSeek V4 / GPT-4o · 抓取：OpenClaw · 知识库：Obsidian · 发布：GitHub + Cloudflare Pages</p>
+</main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Jonathan Xu &middot; <a href="/about">About</a></p>
+  </footer>
+
 </body>
 </html>
