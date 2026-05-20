@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Google I/O 2026 全解析：通宵实测，Gemini 3.5 Flash、Spark、搜索全部拉出来遛了一圈</title>
+<meta property="og:title" content="Google I/O 2026 全解析：通宵实测，Gemini 3.5 Flash、Spark、搜索全部拉出来遛了一圈">
+<meta property="og:description" content="通宵整理Google I/O 2026 全部发布内容：Gemini 3.5 Flash实测（干活能力大增、知识能力取舍）、Gemini Omni Flash翻车体验、Antigravity 2.0 + Spark Agent、搜索框25年最大升级。">
+<meta property="og:image" content="https://jonathanxu.xyz/google-io-2026-full-review.png">
+<meta property="og:url" content="https://jonathanxu.xyz/20260520-google-io-2026-full-review.html">
+<meta property="og:type" content="article">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="weixin:title" content="auto">
+<meta property="weixin:description" content="auto">
+<meta property="weixin:image" content="auto">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/" class="site-logo">Jonathan Xu</a>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="https://github.com/1158971395" target="_blank" rel="noopener">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <article class="article-page">
+    <a href="/" class="article-back">&larr; Back</a>
+    <span class="article-category">AI</span>
+    <h1 class="article-title">Google I/O 2026 全解析：通宵实测，Gemini 3.5 Flash、Spark、搜索全部拉出来遛了一圈</h1>
+    <div class="article-meta">2026-05-20 <span class="dot">·</span> 公众号</div>
+    <img class="article-cover" src="/google-io-2026-full-review.png" alt="Google I/O 2026 全解析：通宵实测，Gemini 3.5 Flash、Spark、搜索全部拉出来遛了一圈" loading="lazy">
+    <div class="article-body">
+    <h2>核心观点</h2>
+    <p>Google I/O 2026 的干货密度极高。Gemini 3.5 Flash 干活能力大幅提升（编码/Agent/工具调用超越 3.1 Pro），但知识推理能力反而下降；Gemini Omni Flash 实际上手体验翻车，不如 Seedance；Antigravity 2.0 才是真亮点，93 个 Agent 12 小时从零造 OS；Gemini Spark 对标个人 AI 管家；Google 搜索迎来 25 年最大改版。</p>
+
+    <h2>关键数据</h2>
+    <div class="data-cards">
+    <div class="data-card"><div class="value">3.5 Flash</div><div class="label">编码/Agent碾压3.1Pro，知识下降</div></div>
+    <div class="data-card"><div class="value">$1.50/9.00</div><div class="label">输入/输出每百万token价格</div></div>
+    <div class="data-card"><div class="value">93 Agents</div><div class="label">12h从零造OS，成本<$1000</div></div>
+    <div class="data-card"><div class="value">$100-200/月</div><div class="label">Ultra新价格体系</div></div>
+    <div class="data-card"><div class="value">10亿</div><div class="label">AI Mode搜索月活</div></div>
+    <div class="data-card"><div class="value">Gemini Spark</div><div class="label">24/7个人AI管家</div></div>
+    </div>
+
+    <blockquote>过去三年OpenAI和Google恨不得搞死对方，今天他们在SynthID这件事上放下芥蒂一起合作了。<cite>— 作者</cite></blockquote>
+
+    <h2>一、AI模型</h2>
+    <p><strong>Gemini 3.5 Flash</strong> — 编码/Agent能力大涨，但知识面缩水。Terminal-Bench 2.1 76.2% vs 3.1 Pro 70.3%，GDPval-AA 1656 Elo vs 1314 Elo。但在 Humanity's Last Exam（40.2%）和 ARC-AGI-2（72.1%）上输给 Pro。速度比其他模型快 4 倍。知识截止 2025 年 1 月，上下文 100 万 token。</p>
+    <p><strong>Gemini Omni Flash</strong> — 作者实际上手体验后评价"有点拉了"，效果不如 Seedance 2.0，中文口音有港台腔。唯一亮点：支持视频局部修改保留某片段。</p>
+
+    <h2>二、产品升级</h2>
+    <ul>
+    <li><strong>Ask Maps</strong> — 地图十年最大升级，支持自然语言对话</li>
+    <li><strong>Ask YouTube</strong> — 视频内容对话式搜索</li>
+    <li><strong>Docs Live</strong> — 语音直接生成文档，说乱了 Gemini 自己整理</li>
+    <li><strong>Gemini App</strong> — Neural Expressive 新设计，新增周限额</li>
+    <li><strong>Daily Brief</strong> — 每日个性化摘要，自动翻邮箱/日历/任务</li>
+    </ul>
+
+    <h2>三、Agent 系统</h2>
+    <p><strong>Antigravity 2.0</strong> — 从 IDE 插件升级为独立桌面应用，93 个 subagent 并行跑、12 小时、1.5 万次模型请求、26 亿 token、成本不到 $1000，从零构建可运行 OS（能跑 DOOM）。在 Antigravity 里 3.5 Flash 被优化到 12 倍速。</p>
+    <p><strong>Gemini Spark</strong> — 24/7 个人 Agent，跑在 Google Cloud 云端，深度打通全家桶。$100/月 Ultra 可用。</p>
+    <p><strong>Android Halo</strong> — Agent 专属状态栏，可能开启 Android 全新 UI 层级。</p>
+
+    <h2>四、视觉生成 & 搜索</h2>
+    <p><strong>Google Pics</strong> — Workspace 图像创作工具；<strong>Stitch</strong> — UI 设计工具；<strong>Google Flow</strong> — 创意工作流全包；<strong>SynthID</strong> — 1000 亿张图打水印，OpenAI 加入合作。</p>
+    <p><strong>Google 搜索</strong> — AI Mode 月活 10 亿，底层模型升级为 3.5 Flash。搜索框 25 年最大升级，支持多模态输入。新增 Search Agents 可 7×24h 后台盯盘。</p>
+
+    <h2>五、定价</h2>
+    <p>AI Ultra 从 $250/月拆为两档：<strong>$100/月</strong>（5 倍 Pro 用量 + 20TB 云存储 + YouTube Premium）和 <strong>$200/月</strong>（保留所有顶配）。Spark 在两档均可使用。</p>
+
+    <div class="original-link">📎 <a href="https://mp.weixin.qq.com/s/X6RFAIY1skuMQITuG-M7Yg" target="_blank" rel="noopener">View original</a></div>
+    </div>
+    <nav class="article-nav">
+      <div class="nav-prev"></div>
+      <div class="nav-home"><a href="/">Home</a></div>
+      <div class="nav-next"></div>
+    </nav>
+  </article>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Jonathan Xu &middot; <a href="/about">About</a></p>
+  </footer>
+</body>
+</html>
