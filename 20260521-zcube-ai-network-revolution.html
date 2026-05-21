@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ZCube 组网架构让推理集群多挤出15%算力 — 新智元</title>
+<meta property="og:title" content="ZCube 组网架构让推理集群多挤出15%算力">
+<meta property="og:description" content="GPU一块没加，代码一行没改，仅靠重构组网架构就让推理集群多挤出15%的算力。智谱联合驭驯网络与清华大学在GLM-5.1生产集群完成ZCube规模化落地。">
+<meta property="og:image" content="https://jonathanxu.xyz/zcube-ai-network-revolution.png">
+<meta property="og:url" content="https://jonathanxu.xyz/20260521-zcube-ai-network-revolution.html">
+<meta property="og:type" content="article">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="site-header"><div class="header-inner">
+    <a href="/" class="site-logo">Jonathan Xu</a>
+    <nav><a href="/">Home</a><a href="/about">About</a><a href="https://github.com/1158971395">GitHub</a></nav>
+  </div></header>
+  <article class="article-page">
+    <a href="/" class="article-back">&larr; Back</a>
+    <span class="article-category">AI</span>
+    <h1 class="article-title">ZCube 组网架构让推理集群多挤出15%算力</h1>
+    <div class="article-meta">2026-05-21 <span class="dot">·</span> 新智元</div>
+    <img class="article-cover" src="/zcube-ai-network-revolution.png" alt="ZCube AI网络架构革命" loading="lazy">
+    <div class="article-body">
+    <h2>核心观点</h2>
+    <p>GPU利用率被网络「锁住」了。ZCube 通过重构组网架构（去掉 Spine 层，全网每两张 GPU 之间只有一条最优路径），在不增加任何硬件的前提下，让推理吞吐提升15%以上，硬件成本降低三分之一。</p>
+
+    <h2>关键洞察</h2>
+    <div class="data-cards">
+    <div class="data-card"><div class="value">+15%</div><div class="label">GPU平均推理吞吐提升</div></div>
+    <div class="data-card"><div class="value">-40.6%</div><div class="label">TTFT P99延迟降低</div></div>
+    <div class="data-card"><div class="value">-⅓</div><div class="label">交换机与光模块硬件成本</div></div>
+    <div class="data-card"><div class="value">2跳</div><div class="label">网络直径</div></div>
+    <div class="data-card"><div class="value">16384</div><div class="label">单层Leaf连接GPU数</div></div>
+    <div class="data-card"><div class="value">2.1亿~6.4亿</div><div class="label">万卡级网络硬件节省</div></div>
+    </div>
+
+    <h2>深度解读</h2>
+
+    <h3>问题：网络成了 GPU 的隐形天花板</h3>
+    <p>大模型推理不是单兵作战，是协同打仗。KV Cache 在 GPU 之间的传递高度动态、不对称——传统 Clos/Fat-Tree 架构下，流量被拓扑关系天然推向同几台交换机和同几条链路，形成热点堆积。实测数据证明：仅把网络带宽从 100Gbps 提升到 200Gbps，推理吞吐就能提升约 19%。</p>
+
+    <h3>ZCube 方案：推翻二十年的「堆交换机」逻辑</h3>
+    <p>ZCube 的做法是三个字：<strong>拆掉它</strong>。取消了传统 Clos 的 Spine 层，全网任意两张 GPU 之间，有且仅有一条最优路径。没有多路径选路的冲突，没有结构性拥塞隐患。</p>
+
+    <blockquote>传统 Clos 是给一座已经堵死的城市装更多红绿灯；ZCube 是重新规划了整张路网，让每辆车都有自己专属的最优路线。</blockquote>
+
+    <h3>中美对标：殊途同归</h3>
+    <div class="data-cards">
+    <div class="data-card"><div class="value">MRC</div><div class="label">OpenAI×NVIDIA/AMD/Intel/Microsoft/Broadcom — 协议层治病</div></div>
+    <div class="data-card"><div class="value">ZCube</div><div class="label">智谱×驭驯网络×清华 — 架构层防病</div></div>
+    </div>
+
+    <h3>行业趋势</h3>
+    <ul>
+    <li>以太网正在加速替代 InfiniBand 成为 AI 集群主流</li>
+    <li>MRC 作为开放协议通过 OCP 发布，NVIDIA/AMD/Broadcom 800Gb/s 网卡已原生支持</li>
+    <li>AI 网络生态从封闭走向开放，从单一供应商走向多元竞争</li>
+    <li>800G 光模块、高密度以太网交换机产业链有望迎来新需求</li>
+    </ul>
+
+    <blockquote>与其无限堆 GPU，不如让现有的 GPU 跑得更顺。2026 年，新的共识正在浮现。</blockquote>
+
+    <div class="original-link">📎 <a href="https://mp.weixin.qq.com/s/Uixxz-Lg-ZFTnnzzpEKMsw" target="_blank" rel="noopener">View original</a> <span class="dot">·</span> <a href="https://z.ai/blog/zcube" target="_blank" rel="noopener">论文: ACM SIGCOMM 2025</a></div>
+    </div>
+    <nav class="article-nav">
+      <div class="nav-prev"></div>
+      <div class="nav-home"><a href="/">Home</a></div>
+      <div class="nav-next"></div>
+    </nav>
+  </article>
+  <footer class="site-footer"><p>&copy; 2026 Jonathan Xu</p></footer>
+</body>
+</html>
