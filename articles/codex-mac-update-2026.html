@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title" content="Codex 这波大更新后，Mac 的含金量再次提升">
+  <meta property="og:description" content="Codex 迎来大更新：Appshots 应用快照、Locked Computer Use 锁屏远程操控、/goal 命令正式上线。macOS 独占功能让 Mac 的 AI PC 含金量再次提升。">
+  <meta property="og:image" content="https://jonathanxu.xyz/codex-mac-update-2026.png">
+  <meta property="og:url" content="https://jonathanxu.xyz/articles/codex-mac-update-2026.html">
+  <meta property="og:type" content="article">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="weixin:title" content="auto">
+  <meta property="weixin:description" content="auto">
+  <meta property="weixin:image" content="auto">
+  <meta name="twitter:card" content="summary_large_image">
+
+<title>Codex 这波大更新后，Mac 的含金量再次提升 · Jonathan Xu</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/" class="site-logo">Jonathan Xu</a>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="https://github.com/1158971395" target="_blank" rel="noopener">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+<article class="article-page">
+  <a href="/" class="article-back">&larr; Back</a>
+  <span class="article-category">AI</span>
+  <h1 class="article-title">Codex 这波大更新后，Mac 的含金量再次提升</h1>
+  <div class="article-meta">2026-05-22 <span class="dot">·</span> APPSO（爱范儿）</div>
+  <img class="article-cover" src="https://jonathanxu.xyz/codex-mac-update-2026.png" alt="Codex 这波大更新后，Mac 的含金量再次提升" loading="lazy">
+
+<div class="article-body">
+
+    <h2>核心观点</h2>
+    <p>OpenAI Codex 本周迎来重大功能更新，新增 <strong>Appshots 应用快照</strong>、<strong>Locked Computer Use 锁屏远程操控</strong>、<strong>/goal 正式发布</strong>等多项能力。但所有新功能均为 macOS 独占，Windows 用户暂不可用。</p>
+
+    <h2>关键洞察</h2>
+
+    <div class="data-cards">
+    <div class="data-card"><div class="value">$5.7B</div><div class="label">OpenAI Q1 营收</div></div>
+    <div class="data-card"><div class="value">macOS</div><div class="label">三大新功能独占</div></div>
+    <div class="data-card"><div class="value">4层</div><div class="label">锁屏安全防护</div></div>
+    <div class="data-card"><div class="value">/goal</div><div class="label">任务驱动 Agent</div></div>
+    </div>
+
+    <h2>深度解读</h2>
+
+    <h3>1. Appshots：从截屏到应用级的上下文理解</h3>
+    <p>同时按下两个 Command 键，Codex 自动捕获当前应用窗口的截图和文本（包括屏幕不可见内容），作为对话上下文。与普通截图不同，Codex 会结合 <strong>Computer Use</strong> 和 <strong>Chrome 自动化</strong>，读取整个窗口而非仅一张图。</p>
+    <p><strong>实际效果：</strong> 在飞书文档开头按 Command+Command，Codex 会自动打开 Chrome 浏览全文。在微信阅读公众号时同样可用，但存在 Bug——Computer Use 操作微信时可能误登出账号。</p>
+
+    <blockquote>就是这种应用多做了一步的感觉，我们就减少了很多 AI 的使用负担，让 Codex 的体验也变得更加丝滑。</blockquote>
+
+    <h3>2. Locked Computer Use：迈向持久 Agent 的关键一步</h3>
+    <p>这是本次更新最具突破性的功能——Mac 锁屏后，Codex 仍能在后台操控桌面应用完成任务。</p>
+    <p><strong>安全机制（4 层防护）：</strong></p>
+    <ul>
+    <li>解锁窗口极短，仅限当前 Computer Use 操作期间</li>
+    <li>覆盖所有显示器，临时解锁期间屏幕对旁观者不可见</li>
+    <li>检测到键盘/鼠标输入立即重锁</li>
+    <li>仅 Codex 可调用，其他进程无法借道</li>
+    </ul>
+
+    <blockquote>如果 Codex 能够在没有活跃用户会话的情况下运行 Mac 应用，这或许是迈向持久 Agent 基础架构的第一步。</blockquote>
+
+    <h3>3. /goal：从对话到项目管理</h3>
+    <p>/goal 命令从实验室正式推出，将任务当作独立项目进行管理。Codex 会反复判断"还该做什么"和"是否完成"，自动迭代直到任务完成。</p>
+    <p><strong>关键原则：目标必须具体可验证。</strong></p>
+    <ul>
+    <li>✅ 好目标："把首页交互时间压到 1 秒以内"</li>
+    <li>✅ 好目标："将 JavaScript 项目迁移到 TypeScript，strict 模式编译通过"</li>
+    <li>❌ 坏目标："优化一下"、"完善一下"</li>
+    </ul>
+
+    <h3>4. ChatGPT + PowerPoint 集成</h3>
+    <p>ChatGPT 新增可直接在 PowerPoint 中创建和编辑演示文稿的能力，支持 GPT Image 2 生成 PPT 内图片。</p>
+
+    <h3>5. 实用贴士</h3>
+    <p><strong>解决绑定手机号问题：</strong> 先在浏览器打开 <a href="https://auth.openai.com/log-in" target="_blank" rel="noopener">https://auth.openai.com/log-in</a> 登录，再回 Codex 授权即可跳过。</p>
+
+    <blockquote>如果这篇文章获得了一个赞，你的 Codex 有可能重置额度限制 😄</blockquote>
+
+    <h2>文章金句</h2>
+    <blockquote>Mac 用户总是能享受到好东西，而 Windows 用户只能眼巴巴地看着，哈哈。不得不说，Mac mini 作为 AI PC 的含金量还在增加。</blockquote>
+
+    <div class="article-tags" style="margin-top:40px;font-family:var(--font-ui);font-size:13px;color:var(--text-muted);">
+      <span style="background:var(--bg-subtle);padding:4px 12px;border-radius:12px;margin-right:8px;display:inline-block;margin-bottom:4px;">AI</span>
+      <span style="background:var(--bg-subtle);padding:4px 12px;border-radius:12px;margin-right:8px;display:inline-block;margin-bottom:4px;">OpenAI</span>
+      <span style="background:var(--bg-subtle);padding:4px 12px;border-radius:12px;margin-right:8px;display:inline-block;margin-bottom:4px;">Codex</span>
+      <span style="background:var(--bg-subtle);padding:4px 12px;border-radius:12px;margin-right:8px;display:inline-block;margin-bottom:4px;">macOS</span>
+      <span style="background:var(--bg-subtle);padding:4px 12px;border-radius:12px;margin-right:8px;display:inline-block;margin-bottom:4px;">产品分析</span>
+    </div>
+
+    <div class="original-link">📎 <a href="https://mp.weixin.qq.com/s/ORIGINAL_LINK" target="_blank" rel="noopener">原文链接 · APPSO（爱范儿）</a></div>
+
+</div>
+
+  <nav class="article-nav">
+    <div class="nav-prev"></div>
+    <div class="nav-home"><a href="/">Home</a></div>
+    <div class="nav-next"></div>
+  </nav>
+</article>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Jonathan Xu &middot; <a href="/about">About</a></p>
+  </footer>
+
+</body>
+</html>
