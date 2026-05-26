@@ -1,0 +1,1 @@
+powershell -ExecutionPolicy Bypass -Command "& 'D:\ProgramData\Anaconda3\python.exe' 'C:\Users\1158971395\.agents\skills\autoglm-generate-image\generate-image.py' 'τ Scaling时间缩放理论——华为何庭波提出后摩尔时代新范式。深红色华为风格，极简商务PPT信息图，蓝色/白色科技感线条，三维芯片堆叠视觉，光速穿梭效果，宽高比1200:630。不要文字，纯视觉构图。'"
