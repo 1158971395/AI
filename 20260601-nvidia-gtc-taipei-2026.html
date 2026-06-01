@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NVIDIA GTC Taipei 2026 — AI Everywhere</title>
+<meta property="og:title" content="NVIDIA GTC Taipei 2026 — AI Everywhere, From PCs to Factories">
+<meta property="og:description" content="GTC Taipei 2026：RTX Spark Agent PC芯片、Vera Rubin量产、Cosmos 3全模态开源、Isaac GR00T开源人形机器人、Agent Toolkit四层基础设施。">
+<meta property="og:image" content="https://jonathanxu.xyz/20260601-nvidia-gtc-taipei-2026.png">
+<meta property="og:url" content="https://jonathanxu.xyz/20260601-nvidia-gtc-taipei-2026.html">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/" class="site-logo">AI Insights</a>
+      <nav class="header-nav">
+        <a href="/">Home</a>
+        <a href="/feed.xml">RSS</a>
+      </nav>
+    </div>
+  </header>
+
+  <article class="article-page">
+    <a href="/" class="article-back">&larr; Back</a>
+    <span class="article-category">NVIDIA · AI芯片</span>
+    <h1 class="article-title">NVIDIA GTC Taipei 2026 — AI Everywhere, From PCs to Factories</h1>
+    <div class="article-meta">2026-06-01 <span class="dot">·</span> NVIDIA Newsroom / OpenClaw</div>
+    <img class="article-cover" src="/20260601-nvidia-gtc-taipei-2026.png" alt="NVIDIA GTC Taipei 2026" loading="lazy">
+
+    <div class="article-body">
+
+      <blockquote>"过去四十年，计算机是为人造的。从今天起，它要为 Agent 造。" — Jensen Huang</blockquote>
+
+      <h2>核心结论</h2>
+      <p>GTC Taipei 2026 是英伟达迄今为止发布密度最高的一场 GTC。从消费级 Agent PC 芯片到万卡数据中心，从开源世界模型到开源人形机器人，英伟达完成了从芯片公司到 AI 基础设施公司的全面转型。</p>
+
+      <h2>关键发布速览</h2>
+
+      <table>
+        <thead>
+          <tr><th>类别</th><th>发布</th><th>一句话</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>🔴 消费硬件</td><td>RTX Spark (N1X)</td><td>6144 CUDA + 128GB 统一内存，个人 Agent 电脑</td></tr>
+          <tr><td>🔴 消费硬件</td><td>DGX Station for Windows</td><td>748GB 内存 / 20 PFLOPS，桌面万亿参数模型</td></tr>
+          <tr><td>🔴 数据中心</td><td>Vera Rubin NVLink 72</td><td>全面量产，机架组装 5 分钟</td></tr>
+          <tr><td>🟢 模型</td><td>Cosmos 3</td><td>全开源全模态物理世界模型</td></tr>
+          <tr><td>🟢 模型</td><td>Nemotron 3 Ultra</td><td>5500 亿参数开源模型</td></tr>
+          <tr><td>🟣 Agent</td><td>Agent Toolkit</td><td>四层 Agent 基础设施</td></tr>
+          <tr><td>🟡 机器人</td><td>Isaac GR00T</td><td>全球首个开源人形机器人</td></tr>
+        </tbody>
+      </table>
+
+      <h3>RTX Spark — 重新发明 PC</h3>
+      <p>"过去四十年，计算机是为人造的。从今天起，它要为 Agent 造。"</p>
+      <p>RTX Spark (N1X) 是英伟达与微软联手打造的全球首款 Agent PC 芯片。<strong>6144 CUDA 核心，128GB LPDDR5X 统一内存，1 PFLOP FP4 AI 算力</strong>，20 核 Grace CPU（联发科合作），台积电 3nm，700 亿晶体管。14mm 笔记本即能本地跑 70B–120B 参数模型，支持 LoRA 微调、RAG、Agent 自迭代。</p>
+      <p>关键护城河：第一次在同一颗芯片上实现<strong>统一内存 + 完整 CUDA 生态</strong>——Mac 有内存没 CUDA，传统 N 卡有 CUDA 但被显存卡死。</p>
+
+      <h3>Vera Rubin：下一代数据中心全面量产</h3>
+      <p><strong>72 块 Rubin GPU + 36 颗 Vera CPU</strong> 组成 NVLink 72 超级计算单元。供应链规模 2× Grace Blackwell，机架组装从 2 小时缩至 5 分钟，无电缆/无软管/无风扇设计。超过 100 万 MGX 组件来自台湾 25 个工厂，500+ 合作伙伴。</p>
+
+      <h3>Cosmos 3：全开源全模态物理 AI 模型</h3>
+      <p>基于 Mixture-of-Transformers 架构，原生理解和生成<strong>文本、图像、视频、环境声音、动作数据</strong>五合一。世界生成排名第一，训练从数月缩至数天，完全开源。成立 Cosmos 联盟（思灵机器人、Runway、Skild AI 等）。</p>
+
+      <h3>Agent 基础设施四层架构</h3>
+      <p><strong>模型层</strong> Nemotron 3 Ultra + Cosmos 3<br>
+      <strong>框架层</strong> Claude Code / Codex / OpenClaw 直跑<br>
+      <strong>工具层</strong> CUDA-X Skills<br>
+      <strong>运行时层</strong> OpenShell（Apache 2.0 开源安全运行时）</p>
+
+      <h3>Isaac GR00T：全球首个开源人形机器人</h3>
+      <p>1.8 米，68 公斤，75 DOF，宇树科技 2026 年底生产。宇树 H2 Plus 本体 + Sharpa Wave 五指灵巧手 + Jetson AGX Thor T5000。Ai2、ETH Zurich、Stanford Robotics 已确认采用。</p>
+
+      <h3>DSX：从卖芯片到卖整座 AI 工厂</h3>
+      <p>NVIDIA DSX 提供 AI 工厂完整施工蓝图——数字孪生模拟 + DSX OS 接管运营。老黄预言到本世纪末 100 吉瓦 AI 工厂陆续上线。</p>
+
+      <div class="references-section">
+        <h2>参考文献</h2>
+        <ol>
+          <li>NVIDIA GTC Taipei 2026 — 完整发布全览，OpenClaw，2026-06-01</li>
+          <li>NVIDIA AI Cloud Ecosystem Expands Worldwide，NVIDIA Blog，2026-05-31</li>
+          <li>NVIDIA Factory Operations Blueprint，NVIDIA Blog，2026-05-31</li>
+          <li>NVIDIA Isaac GR00T Reference Humanoid Robot，NVIDIA Newsroom，2026-05-31</li>
+          <li>NVIDIA Releases Open Source Agent Tools for Physical AI，NVIDIA Newsroom，2026-05-31</li>
+        </ol>
+      </div>
+
+      <div class="original-link">📎 <a href="https://openclawmy.work/gtc-taipei-2026.html" target="_blank">View original</a></div>
+
+    </div>
+
+    <nav class="article-nav">
+      <div class="nav-prev"></div>
+      <div class="nav-home"><a href="/">Home</a></div>
+      <div class="nav-next"></div>
+    </nav>
+  </article>
+
+  <footer class="site-footer">
+    <p>© 2026 AI Insights · Built with care</p>
+  </footer>
+</body>
+</html>
