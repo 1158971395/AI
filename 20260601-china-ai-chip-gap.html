@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Counting the Gap — China's 2026 AI Chip Shortfall</title>
+<meta property="og:title" content="Counting the Gap — China's 2026 AI Chip Shortfall">
+<meta property="og:description" content="2026年中国AI算力总盘约6500亿capex，对应290-320万张国产卡需求，但实际产能仅160-215万张，缺口约120万张（40%）。">
+<meta property="og:image" content="https://jonathanxu.xyz/20260601-china-ai-chip-gap.png">
+<meta property="og:url" content="https://jonathanxu.xyz/20260601-china-ai-chip-gap.html">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/" class="site-logo">AI Insights</a>
+      <nav class="header-nav">
+        <a href="/">Home</a>
+        <a href="/feed.xml">RSS</a>
+      </nav>
+    </div>
+  </header>
+
+  <article class="article-page">
+    <a href="/" class="article-back">&larr; Back</a>
+    <span class="article-category">AI芯片</span>
+    <h1 class="article-title">Counting the Gap — China's 2026 AI Chip Shortfall</h1>
+    <div class="article-meta">2026-06-01 <span class="dot">·</span> AI钦天监</div>
+    <img class="article-cover" src="/20260601-china-ai-chip-gap.png" alt="China 2026 AI Chip Gap" loading="lazy">
+
+    <div class="article-body">
+
+      <h2>核心结论</h2>
+      <p>2026年中国AI算力的真实情况不是"够用"也不是"略紧"，而是被国产卡的产能上限硬顶住了——投入6500亿capex的算力需求，只有六到七成能找到对应的国产卡，剩下三到四成的钱，市场上没有货可以接。</p>
+
+      <h2>关键数据</h2>
+
+      <div class="data-cards">
+        <div class="data-card">
+          <div class="data-card-value">290-320万</div>
+          <div class="data-card-label">需求（片）</div>
+        </div>
+        <div class="data-card">
+          <div class="data-card-value">160-215万</div>
+          <div class="data-card-label">供给（片）</div>
+        </div>
+        <div class="data-card">
+          <div class="data-card-value">~120万</div>
+          <div class="data-card-label">缺口（片）</div>
+        </div>
+        <div class="data-card">
+          <div class="data-card-value">~40%</div>
+          <div class="data-card-label">缺口占比</div>
+        </div>
+      </div>
+
+      <h3>A. 需求端：6500亿capex的算力饥渴</h3>
+
+      <p>2026年几家头部互联网公司的AI资本开支基本已经摊在桌面上：</p>
+
+      <ul>
+        <li><strong>阿里</strong>：三年3800亿计划下，单年约1500亿</li>
+        <li><strong>字节</strong>：AI capex指引约2000亿</li>
+        <li><strong>腾讯</strong>：约1500亿，AI是主体</li>
+        <li><strong>百度、美团、京东、快手、小米</strong>合计再加500-700亿</li>
+      </ul>
+
+      <p>仅互联网大厂这一档就是5500亿出头。加上创业型大模型公司（DeepSeek、Kimi、智谱、MiniMax、阶跃、月之暗面）约300-400亿，三大运营商智算中心400-500亿，地方政府智算园区300-400亿——2026年中国AI算力总盘约<strong>6500-7000亿</strong>。</p>
+
+      <p>但这不是全部买卡的钱。按阿里口径，1500亿cakex中超过1000亿投在算力和机房上，真正花在AI加速卡上的约占整体capex的<strong>45%</strong>。6500亿×45%=约<strong>2900-3200亿</strong>用于买卡。</p>
+
+      <p>国产卡综合均价约10万/片（昇腾910C约12万、平头哥PPU约8万、寒武纪590约10万、海光DCU约8万、昆仑芯P800约9万），对应<strong>290-320万片</strong>需求。</p>
+
+      <h3>B. 供给端：160-215万片的产能天花板</h3>
+
+      <table>
+        <thead>
+          <tr><th>厂商</th><th>2026预计产能</th><th>瓶颈</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>华为昇腾910C</td><td>80-100万片（目标160万）</td><td>HBM管制、CoWoS封装、良率爬坡</td></tr>
+          <tr><td>阿里平头哥PPU</td><td>30-40万片</td><td>仅供阿里云内部</td></tr>
+          <tr><td>寒武纪思元590/690</td><td>15-20万片</td><td>台积电→中芯产能重建</td></tr>
+          <tr><td>海光DCU深算二号</td><td>15-20万片</td><td>—</td></tr>
+          <tr><td>昆仑芯P800</td><td>10-15万片</td><td>主要服务百度内部</td></tr>
+          <tr><td>沐曦/壁仞/燧原</td><td>10-20万片</td><td>出口管制+代工限制</td></tr>
+        </tbody>
+      </table>
+
+      <p>总产能<strong>160-215万片</strong>，中性约185万片。</p>
+
+      <p>华为昇腾是绝对主力，但从160万目标打到实际80-100万，核心三个硬约束：</p>
+
+      <ol>
+        <li><strong>HBM管制</strong>：韩国三星和SK海力士对华HBM3出口在2025年Q4再度收紧，国产HBM量产规模有限</li>
+        <li><strong>先进封装</strong>：中芯N+2配套的国产CoWoS-S类封装，月产能不到台积电四分之一，良率仍在爬坡</li>
+        <li><strong>工艺良率</strong>：910C从910B切换的良率没爬完，实际下线比规划低15-20%</li>
+      </ol>
+
+      <h3>C. 缺口：至少120万张卡</h3>
+
+      <p>需求290-320万片 vs 供给160-215万片</p>
+      <p><strong>缺口75-160万片，中性约120万片（~40%）</strong></p>
+
+      <p>这个数字和产业链现实完全吻合：</p>
+      <ul>
+        <li>昇腾910C订单排到下半年，新客户拿不到货</li>
+        <li>平头哥PPU只供阿里云自用</li>
+        <li>寒武纪、海光现货渠道加价10-20%</li>
+        <li>多地政府智算中心签了合同，卡没到，机房空转</li>
+        <li>黑市H100/H200走私价从25万涨到30万</li>
+      </ul>
+
+      <h3>D. 三个让缺口扩大的开关</h3>
+      <ol>
+        <li><strong>HBM再被卡一道</strong>：三家同时受影响</li>
+        <li><strong>先进封装产能不到位</strong>：台积电CoWoS优先给英伟达</li>
+        <li><strong>模型规模再跳一档</strong>：GPT-5级国产模型，单次预训练从5-10万张跳到20万张以上</li>
+      </ol>
+
+      <h3>E. 补两件事</h3>
+      <p><strong>第一</strong>，能用来预训练的卡更少。国产卡总产能中真正能跑旗舰预训练的只占10-20%（约30-40万片）。</p>
+      <p><strong>第二</strong>，性能差距：昇腾910C单卡FP16约达H100的65%，集群效率差距仍有30-50%。H200靠HBM3e显存（141GB）在推理端优势明显。</p>
+
+      <div class="references-section">
+        <h2>参考文献</h2>
+        <ol>
+          <li>给国产大模型芯片缺口算个账，AI钦天监（监正），2026-05。<a href="https://mp.weixin.qq.com/s/tkl-kxA_DKhC6SsoQCOeFg" target="_blank">阅读原文</a></li>
+        </ol>
+      </div>
+
+      <div class="original-link">📎 <a href="https://mp.weixin.qq.com/s/tkl-kxA_DKhC6SsoQCOeFg" target="_blank">View original</a></div>
+
+    </div>
+
+    <nav class="article-nav">
+      <div class="nav-prev"></div>
+      <div class="nav-home"><a href="/">Home</a></div>
+      <div class="nav-next"></div>
+    </nav>
+  </article>
+
+  <footer class="site-footer">
+    <p>© 2026 AI Insights · Built with care</p>
+  </footer>
+</body>
+</html>
